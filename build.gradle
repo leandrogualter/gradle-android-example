@@ -4,7 +4,7 @@ buildscript {
 	}
 
   dependencies {
-    classpath 'org.gradle.api.plugins:gradle-android-plugin:1.2.1'
+		classpath 'com.android.tools.build:gradle:0.11.1'
   }
 }
 apply plugin: 'android'
@@ -13,18 +13,6 @@ apply plugin: 'eclipse'
 repositories {
   mavenCentral()
   mavenRepo(url: new File(System.properties['user.home'], '.m2/repository').toURI().toURL())
-}
-
-android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.0"
-
-    defaultConfig {
-        versionCode 12
-        versionName computeVersionName()
-        minSdkVersion 16
-        targetSdkVersion 16
-    }
 }
 
 dependencies {
